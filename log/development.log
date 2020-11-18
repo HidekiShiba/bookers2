@@ -3559,3 +3559,15 @@ Processing by BooksController#new as HTML
 Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/books/new" for 60.76.117.237 at 2020-11-18 06:12:23 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 401ms (Views: 364.6ms | ActiveRecord: 1.3ms)
+
+
