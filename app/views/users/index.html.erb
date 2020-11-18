@@ -1,0 +1,18 @@
+<h2>Users</h2>
+<table>
+　<thead>
+    <tr>
+    　<th>image</th>
+    　<th>name</th>
+    </tr>
+　</thead>
+　<tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <!--　画像挿入　-->
+    　<td><%= user.profile_image_id %></td>
+    　<td><%= user.name %></td>
+    </tr>
+    <% end %>
+　</tbody>
+</table>
