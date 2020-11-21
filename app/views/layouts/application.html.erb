@@ -8,29 +8,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <% if user_signed_in? %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand"><span><%= link_to "Bookers", root_path %></span></a>
+      <a class="navbar-brand" href="/"><span>Bookers</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <%= link_to  user_path(current_user.id), method: :get do %>
-            <i class="fas fa-home nav-link text-light"></i>Home
-          <% end %>
-          <%= link_to  users_path, method: :get do %>
-            <i class="fas fa-users nav-link text-light"></i>Users
-          <% end %>
-          <%= link_to  books_path, method: :get do %>
-            <i class="fas fa-book-open nav-link text-light"></i>Books
-          <% end %>
-          <%= link_to  destroy_user_session_path, method: :delete do %>
-            <i class="fas fa-sign-out-alt nav-link text-light" rel="nofollow" data-method="delete"></i>logout
-          <% end %>
+          <li><a class="fas fa-home nav-link text-light" href="/users/<%= current_user.id %>"> Home</a></li>
+          <li><a class="fas fa-users nav-link text-light" href="/users"> Users</a></li>
+          <li><a class="fas fa-book-open nav-link text-light" href="/books"> Books</a></li>
+          <li><a class="fas fa-sign-out-alt nav-link text-light" rel="nofollow" data-method="delete" href="/users/sign_out"> logout</a></li>
         </ul>
       </div>
     </div>
@@ -44,18 +35,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-          <%= link_to  root_path, method: :get do %>
-            <i class="fas fa-home nav-link text-light"></i>Home
-          <% end %>
-          <%= link_to  home_about_path, method: :get do %>
-            <i class="fas fa-link nav-link text-light"></i>About
-          <% end %>
-          <%= link_to  new_user_registration_path, method: :get do %>
-            <i class="fas fa-user-plus nav-link text-light"></i>sign up
-          <% end %>
-          <%= link_to  new_user_session_path, method: :get do %>
-            <i class="fas fa-sign-in-alt nav-link text-light"></i> login
-          <% end %>
+          <li><a class="fas fa-home nav-link text-light" href="/"> Home</a></li>
+          <li><a class="fas fa-link nav-link text-light" href="/home/about"> About</a></li>
+          <li><a class="fas fa-user-plus nav-link text-light" href="/users/sign_up"> sign up</a></li>
+          <li><a class="fas fa-sign-in-alt nav-link text-light" href="/users/sign_in"> login</a></li>
         </ul>
       </div>
     </div>
