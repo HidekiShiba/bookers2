@@ -19670,3 +19670,223 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/home/about" for 60.76.117.237 at 2020-11-21 03:10:30 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Parameters: {"authenticity_token"=>"0OOSG2YWIrXi0vyDMWo4DCYmZ1/tfYTD3wKvBJuxprgVvQItrzSV7nlMqy3n84SRPcxqY8J23c0sVZ990i5bSA=="}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.76.117.237 at 2020-11-21 03:10:30 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 60.76.117.237 at 2020-11-21 03:10:36 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"Bi4c3h8HFPPePWd99oWE6vAqcFH4MIQh6CnUwQhayODDcIzo1iWjqEWjMNMgHDh368B9bdc73S8bfuS4QcU1EA=="}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 60.76.117.237 at 2020-11-21 03:57:21 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"5i6DYlwYWuBp6GCQljZfjmJi+OA9rY/XsODL7VLaTNojcBNUlTrtu/J2Nz5Ar+MTeYj13BKm1tlDt/uUG0WxKg=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 60.76.117.237 at 2020-11-21 03:57:30 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eQQmq1dKS0yLmPDRRqKmger9X//prQZonDPD1n7qfz+8Wradnmj8FxAGp3+QOxoc8RdSw8amX2ZvZPOvN3WCzw==", "user"=>{"name"=>"ぴーさん", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "ぴーさん"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to https://042954c50f4946ac9cabc4f5e4353580.vfs.cloud9.us-east-1.amazonaws.com/users/8
+Completed 302 Found in 310ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8" for 60.76.117.237 at 2020-11-21 03:57:30 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_list.html.erb (1.6ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."created_at" DESC[0m  [["user_id", 8]]
+  ↳ app/views/users/show.html.erb:19
+  Rendered users/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 60.76.117.237 at 2020-11-21 03:57:53 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"7IgagRp9NtDXNwdgfkofQ6/st0kR3+0KDrWGFBlaCtReBgH8W28BFnqsVXmfTEgdVDNF2/AwLSdGA0cqT6XgEg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_list.html.erb (1.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/users/index.html.erb:20
+  Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 41ms (Views: 36.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/8" for 60.76.117.237 at 2020-11-21 04:02:55 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_list.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."created_at" DESC[0m  [["user_id", 8]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 60.76.117.237 at 2020-11-21 04:03:15 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_list.html.erb (2.2ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."created_at" DESC[0m  [["user_id", 8]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/29" for 60.76.117.237 at 2020-11-21 04:03:28 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:5
+  Rendered books/_list.html.erb (4.0ms)
+  Rendered books/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 40ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/8" for 60.76.117.237 at 2020-11-21 04:05:02 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"authenticity_token"=>"BP0bg++ftekKykhOhHkxAYSy14MaQzaID2k4D0pt3X62cwD+ro2CL6dRGldlf2Zff20lEfus9qVH3/kxHJI3uA==", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_list.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."created_at" DESC[0m  [["user_id", 8]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 60.76.117.237 at 2020-11-21 04:05:06 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Parameters: {"authenticity_token"=>"AYMlM9QuetLA+jfr+8PX+Z434ypVp8vCYKrowJDRy3izDT5OlTxNFG1hZfIaxYCnZegRuLRIC+8oHCn+xi4hvg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_list.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."created_at" DESC[0m
+  ↳ app/views/users/index.html.erb:20
+  Rendered users/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8/edit" for 60.76.117.237 at 2020-11-21 04:05:57 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"authenticity_token"=>"0STkfxbaHV+DcWpxC/jCa4hrTSst85kx7sBMdCbAuIFjqv8CV8gqmS7qOGjq/pU1c7S/ucwcWRymdo1KcD9SRw==", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8/edit" for 60.76.117.237 at 2020-11-21 04:13:58 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8/edit" for 60.76.117.237 at 2020-11-21 04:15:58 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8/edit" for 60.76.117.237 at 2020-11-21 04:16:00 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/8/edit" for 60.76.117.237 at 2020-11-21 04:17:08 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+

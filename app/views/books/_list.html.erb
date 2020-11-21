@@ -12,6 +12,7 @@
       <th>introduction</th>
       <th><%= @book.user.introduction %></th>
     </tr>
+    </tbody>
     <div class="row">
       <% if @book.user.id == current_user.id %>
           <a>
