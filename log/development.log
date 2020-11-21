@@ -18866,3 +18866,81 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 0.4ms)
 
 
+Started POST "/books" for 60.76.117.237 at 2020-11-20 12:20:01 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ecN6ukiuXQsUyI7ww0RttU7WJIJ7zxOCg6q7fOx0JbAD6+wFMWatnXrwI7jEX8XnuONDdnNMAFE1VmJYwENMTA==", "book"=>{"title"=>"あいうえお", "body"=>"あいうえお"}, "commit"=>"Create Book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:16
+  [1m[36mBook Create (0.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "あいうえお"], ["body", "あいうえお"], ["user_id", 8], ["created_at", "2020-11-20 12:20:01.529480"], ["updated_at", "2020-11-20 12:20:01.529480"]]
+  ↳ app/controllers/books_controller.rb:16
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:16
+Redirected to https://042954c50f4946ac9cabc4f5e4353580.vfs.cloud9.us-east-1.amazonaws.com/books/29
+Completed 302 Found in 13ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/books/29" for 60.76.117.237 at 2020-11-20 12:20:01 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:10
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/books/_list.html.erb:4
+  Rendered books/_list.html.erb (2.9ms)
+  Rendered books/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 60.76.117.237 at 2020-11-20 13:10:13 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.76.117.237 at 2020-11-20 13:10:15 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 60.76.117.237 at 2020-11-21 00:15:10 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 251ms (Views: 240.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.76.117.237 at 2020-11-21 00:15:12 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 60.76.117.237 at 2020-11-21 00:15:14 +0000
+Cannot render console from 60.76.117.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
