@@ -1,14 +1,4 @@
 class BooksController < ApplicationController
-  def index
-    @books = Book.all.order(created_at: :desc)
-    @book = Book.new
-    @book.user_id = current_user.id
-  end
-
-  def show
-    @book = Book.find(params[:id])
-  end
-
   def create
     @books = Book.all.order(created_at: :desc)
     @book = Book.new(book_params)
@@ -19,6 +9,17 @@ class BooksController < ApplicationController
     else 
       render :index
     end
+  end
+  
+  def index
+    @books = Book.all.order(created_at: :desc)
+    @book = Book.new
+    @book.user_id = current_user.id
+  end
+
+  def show
+    @book = Book.find(params[:id])
+    @book_new = Book.new
   end
   
   def edit
